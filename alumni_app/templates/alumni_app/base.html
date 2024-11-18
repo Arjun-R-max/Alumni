@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alumni Association Platform</title>
+  <link rel="stylesheet" href="{% static 'alumni_app/css/styles.css' %}">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{% url 'register' %}">Register</a></li>
+        <li><a href="{% url 'jobs' %}">Jobs</a></li>
+        <li><a href="{% url 'events' %}">Events</a></li>
+        <li><a href="{% url 'networking' %}">Networking</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+  <script src="{% static 'alumni_app/js/main.js' %}"></script>
+</body>
+</html>
